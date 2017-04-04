@@ -1,0 +1,28 @@
+.list-elements {
+
+}
+
+.list-item {
+  display: flex;
+}
+
+.list-cell {
+  flex: 1;
+}
+
+/** Items Qty **/
+.qty-list {
+  display: flex;
+  flex-wrap: wrap; /* TODO */
+  margin-left: 5px;
+}
+
+.qty-item {
+  flex: 1;
+  padding: 10px 20px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: solid 1px black;
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Almanach - Peoples</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  </head>
+  <body>
+    <div class="header">Almanach</div>
+    <!-- ko if: currentStep() == 0 -->
+
+    <!-- /ko -->
+
+    <!-- ko if: currentStep() == 1 -->
+
+    <div class="qty-list" data-bind="foreach: listItemsQty">
+      <div class="qty-item" data-bind="text: text, click: selectItem, attr: { title: description }">
+
+      </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: currentStep() == 2 -->
+    <div class="list-elements" data-bind="foreach: items">
+      <div class="list-item">
+        <div class="list-cell" data-bind="text: MaleName"></div>
+        <div class="list-cell" data-bind="text: FemaleName"></div>
+        <div class="list-cell" data-bind="text: Surname"></div>
+        <div class="list-cell" data-bind="text: Fullname"></div>
+      </div>
+    </div>
+    <!-- /ko -->
+
+
+    <script src="js/vendors/require.min.js" data-main="js/main.js"></script>
+  </body>
+</html>
